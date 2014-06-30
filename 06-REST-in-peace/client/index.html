@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="controlCajaApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Control de Caja">
+    <meta name="author" content="Alberto Basalo">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <title>Control de Caja</title>
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="MenuCtrl as menu">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{ active: menu.funciones.isActive('/') }">
+                        <a href="#/">Totales</a>
+                    </li>
+                    <li ng-class="{ active: menu.funciones.isActive('/nuevo') }">
+                        <a href="#/nuevo">Nuevo</a>
+                    </li>
+                    <li ng-class="{ active: menu.funciones.isActive('/lista') }">
+                        <a href="#/lista">Lista</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container text-center" style="padding-top:50px;" ng-view >
+                
+    </div>
+
+    <!-- JavaScript References -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular-route.min.js"></script>
+    <script src="app.js"></script>
+    <script src="menuCtrl.js"></script>
+    <script src="controlCajaCtrl.js"></script>
+    <script src="movimientosFactory.js"></script>
+    <script src="maestrosFactory.js"></script>
+</body>
+
+</html>

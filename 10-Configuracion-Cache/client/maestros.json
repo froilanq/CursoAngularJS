@@ -1,0 +1,4 @@
+{
+    "categoriasIngresos": ["Nómina", "Ventas", "Intereses Depósitos"],
+    "categoriasGastos": ["Hipotéca", "Compras", "Impuestos"]
+}
